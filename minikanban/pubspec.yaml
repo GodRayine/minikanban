@@ -1,0 +1,58 @@
+name: minikanban
+description: "Мини-канбан: ПК (Windows) — хаб, телефоны (Android) — клиенты, синхронизация по LAN."
+publish_to: "none"
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI: Material вынесен из фреймворка в отдельный пакет (Flutter >= 3.47)
+  material_ui: ^1.11.1
+
+  # Состояние
+  flutter_riverpod: ^2.6.1
+
+  # Хранилище
+  sqflite: ^2.4.1
+  sqflite_common: ^2.5.17
+  sqflite_common_ffi: ^2.3.4
+  path_provider: ^2.1.5
+  path: ^1.9.0
+  flutter_secure_storage: ^9.2.2
+
+  # Сеть / синхронизация
+  shelf: ^1.4.2
+  shelf_router: ^1.1.4
+  http: ^1.2.2
+  nsd: ^4.0.3
+
+  # Привязка по QR
+  qr_flutter: ^4.1.0
+  mobile_scanner: ^6.0.2
+
+  # Утилиты
+  uuid: ^4.5.1
+  device_info_plus: ^11.2.0
+  crypto: ^3.0.6
+  basic_utils: ^5.7.0
+  tray_manager: ">=0.5.0 <0.9.0"
+  window_manager: ">=0.4.0 <0.6.0"
+  launch_at_startup: ^0.5.1
+  workmanager: ^0.10.10
+  permission_handler: ^13.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  fake_async: ^1.3.3
+
+flutter:
+  uses-material-design: true
+  assets:
+    # Значок в трее Windows.
+    - assets/app_icon.ico
